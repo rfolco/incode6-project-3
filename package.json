@@ -1,0 +1,31 @@
+{
+  "name": "project-3",
+  "version": "1.0.0",
+  "description": "This is INCODE course project 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfolco/incode6-project-3.git"
+  },
+  "keywords": [
+    "incode",
+    "project3",
+    "express",
+    "backend"
+  ],
+  "author": "Rhenan Folco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rfolco/incode6-project-3/issues"
+  },
+  "homepage": "https://github.com/rfolco/incode6-project-3#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
