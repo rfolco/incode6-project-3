@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 const port = process.env.PORT || 3000;
 const data = require('./data');
@@ -29,8 +28,8 @@ app.get('/users/:id/schedules', (req, res) => {
   );
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.post('/schedules', (req, res) => {
   data.schedules.push(req.body);
