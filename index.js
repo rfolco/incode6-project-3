@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const bcrypt = require('bcryptjs');
 const port = process.env.PORT || 3000;
 const data = require('./data');
 
@@ -25,6 +27,23 @@ app.get('/users/:id/schedules', (req, res) => {
       return userSchedule.user_id === Number(req.params.id);
     })
   );
+});
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.post('/schedules', (req, res) => {
+  data.schedules.push(req.body);
+  res.send(data.schedules);
+});
+
+app.post('/users', (req, res) => {
+  const { password } = req.body;
+  const salt = bcrypt.genSaltSync(10);
+  const hash = bcrypt.hashSync(password, salt);
+  req.body.password = hash;
+  data.users.push(req.body);
+  res.send(req.body);
 });
 
 app.listen(port, () => {
