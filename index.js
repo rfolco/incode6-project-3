@@ -99,7 +99,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post('/schedules', (req, res) => {
   data.schedules.push({
-    user_id: req.body.userName,
+    user_id: Number(req.body.userName),
     day: req.body.day,
     start_at: req.body.start_at,
     end_at: req.body.end_at,
