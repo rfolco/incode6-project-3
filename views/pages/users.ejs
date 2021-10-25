@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+<header>
+    <%- include('../partials/header'); %>
+</header>
+<main>
+    <table>
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>E-mail address</th>
+          <th>Password</th>
+        </tr>
+        <% for (let i=0; i < users.length; i++) {%>
+          <tr>
+            <td><%=users[i].firstname%></td>
+            <td><%=users[i].lastname%></td>
+            <td><%=users[i].email%></td>
+            <td><%=users[i].password%></td>
+          </tr>
+        <%}%>
+    </table>
+</main>
+</body>
+</html>

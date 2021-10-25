@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+<header>
+    <%- include('../partials/header'); %>
+</header>
+<main id="form-main">
+    <form id="form" method= "POST" action="/schedules" autocomplete="off">
+        <div>
+            <label for="userName">User</label>
+            <select id="user-name" name="userName" required>
+                <% for (let i = 0; i < users.length; i ++) {%>
+                    <option value=<%=i%>><%=`${users[i].firstname} ${users[i].lastname}`%></option>
+                <%}%>
+            </select>
+        </div>
+
+        <div>
+            <label for="day">Day</label>
+            <select id="day" name="day" required>
+                <% for (let i = 0; i < days.length; i ++) {%>
+                    <option value=<%=i%>><%=days[i]%></option>
+                <%}%>
+            </select>
+        </div>
+        
+        <div>
+            <label for="start_at">Start at</label>
+            <select id="start-at" name="start_at" required>
+                <% for (let i = 0; i < start.length; i ++) {%>
+                    <option value=<%=start[i]%>><%=start[i]%></option>
+                <%}%>
+            </select>
+        </div>
+        
+        <div>
+            <label for="end_at">End at</label>
+            <select id="end-at" name="end_at" required>
+                <% for (let i = 0; i < start.length; i ++) {%>
+                    <option value=<%=end[i]%>><%=end[i]%></option>
+                <%}%>
+            </select>
+        </div>
+
+        <div id="submit-button-container">
+            <button id="submit-button" type="submit" form="form" value="Submit">Submit</button>
+        </div>
+
+    </form>
+</main>
+</body>
+</html>
