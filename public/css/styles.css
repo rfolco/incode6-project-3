@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: solid red 1px; */
 }
 
 nav {
@@ -23,7 +22,7 @@ ul {
   column-gap: 3rem;
 }
 
-a {
+ul a {
   text-decoration: none;
   font-size: 1.25rem;
   color: #fff;
@@ -60,18 +59,15 @@ form {
   width: 100%;
   margin: 3rem auto 0;
   font-weight: 500;
-  /* position: relative; */
 }
 
 label {
   font-size: 2rem;
 }
 
-.show {
-  visibility: visible !important;
-}
-
-#submit-button {
+#submit-button,
+#add-user,
+#add-schedule {
   border: none;
   outline: none;
   color: #fff;
@@ -80,11 +76,24 @@ label {
   background-color: #6b7b8b;
   border-radius: 1rem;
   padding: 1em 2.5em;
-  margin-top: 6rem;
-  width: 15rem;
+  margin-top: 3rem;
   box-shadow: 0 0.2rem 0.2rem 0 #5c5c5b;
-  align-self: center;
   cursor: pointer;
+}
+
+#add-user-container,
+#add-schedule-container {
+  text-align: center;
+}
+
+#add-user,
+#add-schedule {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  padding: 1em 1.25em;
+  text-decoration: none;
+  text-align: center;
 }
 
 #submit-button-container {
@@ -94,13 +103,8 @@ label {
   margin: 1rem 0 7rem;
 }
 
-#submit-button {
-  margin-top: 3rem;
-}
-
 #form-main {
   margin: 0 auto;
-  /* text-align: center; */
   width: 60%;
   color: #5c5c5b;
 }
