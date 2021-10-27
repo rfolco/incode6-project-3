@@ -4,7 +4,10 @@
   "description": "This is INCODE course project 3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create_db": "psql -U postgres -f sql/create_db.sql",
+    "create_table": "psql -U postgres -d mrcoffee_schedule_app -f sql/create_table.sql",
+    "seed_table": "psql -U postgres -d mrcoffee_schedule_app -f sql/seed_table.sql"
     
   },
   "repository": {

@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS schedule;
+CREATE TABLE IF NOT EXISTS schedule (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(60) NOT NULL,
+    day SMALLINT NOT NULL CHECK (day BETWEEN 1 AND 7),
+    start_time TIME NOT NULL,
+    end_time TIME NOT NULL
+);
