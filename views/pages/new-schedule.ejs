@@ -8,12 +8,13 @@
     <%- include('../partials/header'); %>
 </header>
 <main id="form-main">
-    <form id="form" method= "POST" action="/schedules" autocomplete="off">
+    <form id="form" method= "POST" action="/new" autocomplete="off">
         <div>
-            <label for="userName">User</label>
-            <select id="user-name" name="userName" required>
-                <% for (let i = 0; i < users.length; i ++) {%>
-                    <option value=<%=i%>><%=`${users[i].firstname} ${users[i].lastname}`%></option>
+            <label for="username">User</label>
+            <select id="user-name" name="username" required>
+                <% for (let i = 0; i < username.length; i ++) {%>
+                    <option value=<%=username[i].username%>><%=`${username[i].username}`%></option>
+                    <!-- <% console.log(username[i].username) %> -->
                 <%}%>
             </select>
         </div>
@@ -28,8 +29,8 @@
         </div>
         
         <div>
-            <label for="start_at">Start at</label>
-            <select id="start-at" name="start_at" required>
+            <label for="start_time">Start at</label>
+            <select id="start-at" name="start_time" required>
                 <% for (let i = 0; i < start.length; i ++) {%>
                     <option value=<%=start[i]%>><%=start[i]%></option>
                 <%}%>
@@ -37,8 +38,8 @@
         </div>
         
         <div>
-            <label for="end_at">End at</label>
-            <select id="end-at" name="end_at" required>
+            <label for="end_time">End at</label>
+            <select id="end-at" name="end_time" required>
                 <% for (let i = 0; i < start.length; i ++) {%>
                     <option value=<%=end[i]%>><%=end[i]%></option>
                 <%}%>

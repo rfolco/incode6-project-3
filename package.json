@@ -8,7 +8,6 @@
     "create_db": "psql -U postgres -f sql/create_db.sql",
     "create_table": "psql -U postgres -d mrcoffee_schedule_app -f sql/create_table.sql",
     "seed_table": "psql -U postgres -d mrcoffee_schedule_app -f sql/seed_table.sql"
-    
   },
   "repository": {
     "type": "git",
@@ -31,6 +30,8 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.14",
+    "pg-promise": "^10.11.1",
+    "pgpromise": "^0.1.1"
   }
 }

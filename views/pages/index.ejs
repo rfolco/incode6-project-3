@@ -8,7 +8,25 @@
     <%- include('../partials/header'); %>
 </header>
 <main>
-    <span id="error-message">Welcome to our schedule website</span>
+    <table>
+        <tr>
+          <th>Username</th>
+          <th>Day</th>
+          <th>Starting time</th>
+          <th>Ending time</th>
+        </tr>
+        <% for (let i=0; i < schedules.length; i++) {%>
+          <tr>
+            <td><%=schedules[i].username%></td>
+            <td><%=daysOfWeek[schedules[i].day]%></td>
+            <td><%=schedules[i].start_time%></td>
+            <td><%=schedules[i].end_time%></td>
+          </tr>
+        <%}%>
+    </table>
+    <div id="add-schedule-container">
+      <a id="add-schedule" href="/new">Add new schedule</a>
+    </div>
 </main>
 </body>
 </html>
